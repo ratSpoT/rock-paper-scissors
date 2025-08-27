@@ -8,8 +8,22 @@
   <script>
     function getComputerChoice() {
       let randInt = Math.floor(Math.random() * 10);
+
+      #ensure equal probability of each option
       while (randInt == 0) {
           randInt = Math.floor(Math.random() * 10);
-    }
+      }
+      
+      randInt = randInt % 3;
+      
+      if (randInt == 0) {
+        return "rock";
+      } else if (randInt == 1) {
+        return "paper";
+      } else {
+        return "scissors";
+      }
+
+    
   </script>
 </body>
